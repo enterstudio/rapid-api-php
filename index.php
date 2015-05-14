@@ -36,7 +36,7 @@ echo $response->body->data->title;
 //print_r($response);
 
 //POST
-echo "<h3>POST Example</h3>";
+echo "<h3>POST Example </h3>";
 $body = [
     'title' => 'My Third Post',
     'slug' => 'my-third-post'
