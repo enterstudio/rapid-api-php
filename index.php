@@ -3,6 +3,7 @@
 require_once 'vendor/autoload.php';
 require_once './src/api/News.php';
 require_once './src/api/Rapid.php';
+require_once './src/api/Response.php';
 
 use Rapid\Api\Rapid;
 use Rapid\Api\News;
@@ -11,19 +12,21 @@ Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
 
 //GET ALL
 echo "<h3>GET ALL Example</h3>";
-$response = News::getAll(['limit'=>2]);
+$response = News::getAll(['limit'=>2, 'offset'=>1]);
+print_r($response->headers());
 
-foreach ($response->body->data as $response) {
+foreach ($response->data() as $response) {
+    echo "<hr/>";
     echo $response->_id . "<br/>";
     echo $response->title . "<br/>";
     echo "<hr/>";
 }
 
 //GET
-echo "<h3>GET Example with id wY2yvKq72ErzL7h5d</h3>";
-$id = "p7Tpkmq55DaBMguED";
+echo "<h3>GET Example with id zps2qaHyCwtXKqicc</h3>";
+$id = "zps2qaHyCwtXKqicc";
 $response = News::get($id, ["title" => "b"]);
-echo $response->body->data->title;
+echo $response->data()->title;
 
 ////LOGIN
 //echo "<h3>LOGIN Example</h3>";
@@ -35,28 +38,28 @@ echo $response->body->data->title;
 //$response = Rapid::logout();
 //print_r($response);
 
-//POST
-echo "<h3>POST Example </h3>";
-$body = [
-    'title' => 'My Third Post',
-    'slug' => 'my-third-post'
-];
-$response = News::post($body);
-print_r($response);
+////POST
+//echo "<h3>POST Example </h3>";
+//$body = [
+//    'title' => 'My Fourth Post',
+//    'slug' => 'my-fourth-post'
+//];
+//$response = News::post($body);
+//print_r($response->message());
 
 ////PUT
 //echo "<h3>PUT Example</h3>";
-//$id = "p7Tpkmq55DaBMguED";
+//$id = "zps2qaHyCwtXKqicc";
 //$body = [
-//    'title' => 'My Third Post',
-//    'slug' => 'my-third-post'
+//    'title' => 'My Fifth Post',
+//    'slug' => 'my-fifth-post'
 //];
 //$response = News::put($id, $body);
 //print_r($response);
 
 ////DELETE
 //echo "<h3>DELETE Example</h3>";
-//$id = "S2aFowJsW4DscaEvB";
+//$id = "zps2qaHyCwtXKqicc";
 //$response = News::delete($id);
 //print_r($response);
 

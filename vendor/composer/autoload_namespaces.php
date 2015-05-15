@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Unirest' => array($vendorDir . '/mashape/unirest-php/src'),
+    'Rapid' => array($baseDir . '/src'),
+    'JasonGrimes' => array($vendorDir . '/jasongrimes/paginator/src'),
 );
