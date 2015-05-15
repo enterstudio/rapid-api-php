@@ -15,6 +15,10 @@ echo "<h3>GET ALL Example</h3>";
 $response = News::getAll(['limit'=>2, 'offset'=>1]);
 print_r($response->headers());
 
+echo "<br/>";
+
+echo $response->paginate();
+
 foreach ($response->data() as $response) {
     echo "<hr/>";
     echo $response->_id . "<br/>";
@@ -22,11 +26,11 @@ foreach ($response->data() as $response) {
     echo "<hr/>";
 }
 
-//GET
-echo "<h3>GET Example with id zps2qaHyCwtXKqicc</h3>";
-$id = "zps2qaHyCwtXKqicc";
-$response = News::get($id, ["title" => "b"]);
-echo $response->data()->title;
+////GET
+//echo "<h3>GET Example with id zps2qaHyCwtXKqicc</h3>";
+//$id = "zps2qaHyCwtXKqicc";
+//$response = News::get($id, ["title" => "b"]);
+//echo $response->data()->title;
 
 ////LOGIN
 //echo "<h3>LOGIN Example</h3>";

@@ -2,6 +2,8 @@
 
 namespace Rapid\Api;
 
+use JasonGrimes\Paginator;
+
 /**
  * Rapid API Response Helpers
  *
@@ -27,7 +29,7 @@ class Response {
     public function status() {
         return $this->response->body->status;
     }
-    
+
     public function message() {
         return $this->response->body->message;
     }
@@ -54,6 +56,16 @@ class Response {
 
     public function perPage() {
         return $this->headers()['x-pagination-per-page'];
+    }
+
+    public function paginate() {
+        $totalItems = $this->count();
+        $itemsPerPage = $this->perPage();
+        $currentPage = $this->currPage();
+        $urlPattern = '/foo/page/(:num)';
+
+        $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
+        return $paginator;
     }
 
 }
