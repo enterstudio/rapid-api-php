@@ -6,7 +6,7 @@ use Unirest\Request;
 
 class Rapid {
 
-    public static $url = "http://localhost:4000";
+    public static $url = "http://localhost:3000";
     public static $version = "1";
     public static $key = "";
     public static $authUrl = "";

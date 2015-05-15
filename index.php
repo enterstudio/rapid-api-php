@@ -1,8 +1,8 @@
 <?php
 
 require_once 'vendor/autoload.php';
-require_once './api/Rapid.php';
-require_once './api/News.php';
+require_once './src/api/News.php';
+require_once './src/api/Rapid.php';
 
 use Rapid\Api\Rapid;
 use Rapid\Api\News;
