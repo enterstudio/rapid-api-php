@@ -49,7 +49,7 @@ class News {
             $headers = Rapid::getAuthHeader();
 
         $response = Request::delete(Rapid::getUrl(self::$route), $headers);
-        return $response;
+        return Response::make($response);
     }
 
 }
