@@ -54,11 +54,11 @@ Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
 //$response = Pages::put($id, $body);
 //print_r($response);
 
-//DELETE
-echo "<h3>DELETE Example</h3>";
-$id = "eE5HShXGG6cCGc3hT";
-$response = Pages::delete($id);
-print_r($response);
+////DELETE
+//echo "<h3>DELETE Example</h3>";
+//$id = "eE5HShXGG6cCGc3hT";
+//$response = Pages::delete($id);
+//print_r($response);
 
 ////DELETE ALL
 //echo "<h3>DELETE ALL Example</h3>";
