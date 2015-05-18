@@ -7,5 +7,6 @@ require_once dirname(__FILE__) . '/api/Others.php';
 require_once dirname(__FILE__) . '/api/Feedbacks.php';
 require_once dirname(__FILE__) . '/api/Guestbooks.php';
 require_once dirname(__FILE__) . '/api/Faqs.php';
+require_once dirname(__FILE__) . '/api/Photos.php';
 require_once dirname(__FILE__) . '/api/Rapid.php';
 require_once dirname(__FILE__) . '/api/Response.php';
