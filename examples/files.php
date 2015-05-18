@@ -10,30 +10,62 @@ use Rapid\Api\Files;
 
 Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
 
-//GET ALL
-echo "<h3>GET ALL Example</h3>";
-$response = Files::getAll();
-print_r($response->headers());
+////GET ALL CATEGORIES
+//echo "<h3>GET ALL CATEGORIES</h3>";
+//$response = Files::getCategories();
+//print_r($response->headers());
+//
+//echo "<br/>";
+//
+//echo $response->paginate();
+//
+//foreach ($response->data() as $response) {
+//    echo "<hr/>";
+//    echo $response->_id . "<br/>";
+//    echo $response->title . "<br/>";
+//    echo "<hr/>";
+//}
 
-echo "<br/>";
+////GET ALL BY CATEGORY
+//echo "<h3>GET ALL By Category Example</h3>";
+//$response = Files::getAllByCategory("BrBGJwMsAMscsZMBz");
+//print_r($response->headers());
+//
+//echo "<br/>";
+//
+//echo $response->paginate();
+//
+//foreach ($response->data() as $response) {
+//    echo "<hr/>";
+//    echo $response->_id . "<br/>";
+//    echo $response->title . "<br/>";
+//    echo "<hr/>";
+//}
 
-echo $response->paginate();
+////GET ALL
+//echo "<h3>GET ALL Example</h3>";
+//$response = Files::getAll();
+//print_r($response->headers());
+//
+//echo "<br/>";
+//
+//echo $response->paginate();
+//
+//foreach ($response->data() as $response) {
+//    echo "<hr/>";
+//    echo $response->_id . "<br/>";
+//    echo $response->title . "<br/>";
+//    echo $response->image . "<br/>";
+//    echo $response->short . "<br/>";
+//    echo $response->description . "<br/>";
+//    echo "<hr/>";
+//}
 
-foreach ($response->data() as $response) {
-    echo "<hr/>";
-    echo $response->_id . "<br/>";
-    echo $response->title . "<br/>";
-    echo $response->image . "<br/>";
-    echo $response->short . "<br/>";
-    echo $response->description . "<br/>";
-    echo "<hr/>";
-}
-
-//GET
-echo "<h3>GET Example with id zps2qaHyCwtXKqicc</h3>";
-$id = "GwnXm3GQJSnrEjYbG";
-$response = Files::get($id, ["title" => "b"]);
-echo $response->data()->title;
+////GET
+//echo "<h3>GET Example with id zps2qaHyCwtXKqicc</h3>";
+//$id = "GwnXm3GQJSnrEjYbG";
+//$response = Files::get($id, ["title" => "b"]);
+//echo $response->data()->title;
 
 ////LOGIN
 //echo "<h3>LOGIN Example</h3>";

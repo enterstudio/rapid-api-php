@@ -26,8 +26,8 @@ foreach ($response->data() as $response) {
     echo "<hr/>";
 }
 
-////GET ALL BY CATEGORIES
-//echo "<h3>GET ALL By Categories Example</h3>";
+////GET ALL BY CATEGORY
+//echo "<h3>GET ALL By Category Example</h3>";
 //$response = News::getAllByCategory("3JhroSxuswwuf83HH");
 //print_r($response->headers());
 //

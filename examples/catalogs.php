@@ -26,8 +26,8 @@ Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
 //    echo "<hr/>";
 //}
 
-//GET ALL BY CATEGORIES
-echo "<h3>GET ALL By Categories Example</h3>";
+//GET ALL BY CATEGORY
+echo "<h3>GET ALL By Category Example</h3>";
 $response = Catalogs::getAllByCategory("kosmetik");
 print_r($response->headers());
 
