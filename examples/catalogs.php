@@ -10,9 +10,25 @@ use Rapid\Api\Catalogs;
 
 Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
 
-//GET ALL
-echo "<h3>GET ALL Example</h3>";
-$response = Catalogs::getAll();
+////GET ALL CATEGORIES
+//echo "<h3>GET ALL CATEGORIES</h3>";
+//$response = Catalogs::getCategories();
+//print_r($response->headers());
+//
+//echo "<br/>";
+//
+//echo $response->paginate();
+//
+//foreach ($response->data() as $response) {
+//    echo "<hr/>";
+//    echo $response->_id . "<br/>";
+//    echo $response->title . "<br/>";
+//    echo "<hr/>";
+//}
+
+//GET ALL BY CATEGORIES
+echo "<h3>GET ALL By Categories Example</h3>";
+$response = Catalogs::getAllByCategory("kosmetik");
 print_r($response->headers());
 
 echo "<br/>";
@@ -23,17 +39,33 @@ foreach ($response->data() as $response) {
     echo "<hr/>";
     echo $response->_id . "<br/>";
     echo $response->title . "<br/>";
-    echo $response->image . "<br/>";
-    echo $response->short . "<br/>";
-    echo $response->description . "<br/>";
     echo "<hr/>";
 }
 
-//GET
-echo "<h3>GET Example with id zps2qaHyCwtXKqicc</h3>";
-$id = "BHEFDKfiYSaiccCvc";
-$response = Catalogs::get($id, ["title" => "b"]);
-echo $response->data()->title;
+////GET ALL
+//echo "<h3>GET ALL Example</h3>";
+//$response = Catalogs::getAll();
+//print_r($response->headers());
+//
+//echo "<br/>";
+//
+//echo $response->paginate();
+//
+//foreach ($response->data() as $response) {
+//    echo "<hr/>";
+//    echo $response->_id . "<br/>";
+//    echo $response->title . "<br/>";
+//    echo $response->image . "<br/>";
+//    echo $response->short . "<br/>";
+//    echo $response->description . "<br/>";
+//    echo "<hr/>";
+//}
+
+////GET
+//echo "<h3>GET Example with id zps2qaHyCwtXKqicc</h3>";
+//$id = "BHEFDKfiYSaiccCvc";
+//$response = Catalogs::get($id, ["title" => "b"]);
+//echo $response->data()->title;
 
 ////LOGIN
 //echo "<h3>LOGIN Example</h3>";

@@ -9,6 +9,19 @@ use Unirest\Request;
 class News {
 
     private static $route = 'news';
+    private static $belongsToRoute = 'categories';
+
+    public static function getCategories($params = null, $headers = null) {
+        $params['collectionName'] = self::$route;
+
+        $response = Request::get(Rapid::getUrl(self::$belongsToRoute), $headers, $params);
+        return Response::make($response);
+    }
+
+    public static function getAllByCategory($categoryIdOrSlug, $params = null, $headers = null) {
+        $response = Request::get(Rapid::getUrl(self::$belongsToRoute . '/' . $categoryIdOrSlug . '/' . self::$route), $headers, $params);
+        return Response::make($response);
+    }
 
     public static function getAll($params = null, $headers = null) {
         $response = Request::get(Rapid::getUrl(self::$route), $headers, $params);

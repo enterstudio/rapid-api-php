@@ -10,9 +10,9 @@ use Rapid\Api\News;
 
 Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
 
-//GET ALL
-echo "<h3>GET ALL Example</h3>";
-$response = News::getAll(['limit'=>5, 'offset'=>1]);
+//GET ALL CATEGORIES
+echo "<h3>GET ALL CATEGORIES</h3>";
+$response = News::getCategories();
 print_r($response->headers());
 
 echo "<br/>";
@@ -25,6 +25,38 @@ foreach ($response->data() as $response) {
     echo $response->title . "<br/>";
     echo "<hr/>";
 }
+
+////GET ALL BY CATEGORIES
+//echo "<h3>GET ALL By Categories Example</h3>";
+//$response = News::getAllByCategory("3JhroSxuswwuf83HH");
+//print_r($response->headers());
+//
+//echo "<br/>";
+//
+//echo $response->paginate();
+//
+//foreach ($response->data() as $response) {
+//    echo "<hr/>";
+//    echo $response->_id . "<br/>";
+//    echo $response->title . "<br/>";
+//    echo "<hr/>";
+//}
+
+////GET ALL
+//echo "<h3>GET ALL Example</h3>";
+//$response = News::getAll(['limit'=>5, 'offset'=>1]);
+//print_r($response->headers());
+//
+//echo "<br/>";
+//
+//echo $response->paginate();
+//
+//foreach ($response->data() as $response) {
+//    echo "<hr/>";
+//    echo $response->_id . "<br/>";
+//    echo $response->title . "<br/>";
+//    echo "<hr/>";
+//}
 
 ////GET
 //echo "<h3>GET Example with id zps2qaHyCwtXKqicc</h3>";
