@@ -1,12 +1,12 @@
 <?php
 
 require_once '../vendor/autoload.php';
-require_once '../src/api/News.php';
-require_once '../src/api/Rapid.php';
-require_once '../src/api/Response.php';
+require_once '../src/Rapid/News.php';
+require_once '../src/Rapid/Rapid.php';
+require_once '../src/Rapid/Response.php';
 
-use Rapid\Api\Rapid;
-use Rapid\Api\News;
+use Rapid\Rapid;
+use Rapid\News;
 
 Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
 

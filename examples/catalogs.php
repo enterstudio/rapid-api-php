@@ -1,12 +1,12 @@
 <?php
 
 require_once '../vendor/autoload.php';
-require_once '../src/api/Catalogs.php';
-require_once '../src/api/Rapid.php';
-require_once '../src/api/Response.php';
+require_once '../src/Rapid/Catalogs.php';
+require_once '../src/Rapid/Rapid.php';
+require_once '../src/Rapid/Response.php';
 
-use Rapid\Api\Rapid;
-use Rapid\Api\Catalogs;
+use Rapid\Rapid;
+use Rapid\Catalogs;
 
 Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
 

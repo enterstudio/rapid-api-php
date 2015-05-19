@@ -1,12 +1,12 @@
 <?php
 
 require_once '../vendor/autoload.php';
-require_once '../src/api/Photos.php';
-require_once '../src/api/Rapid.php';
-require_once '../src/api/Response.php';
+require_once '../src/Rapid/Photos.php';
+require_once '../src/Rapid/Rapid.php';
+require_once '../src/Rapid/Response.php';
 
-use Rapid\Api\Rapid;
-use Rapid\Api\Photos;
+use Rapid\Rapid;
+use Rapid\Photos;
 
 Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
 

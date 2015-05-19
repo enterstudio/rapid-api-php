@@ -1,9 +1,9 @@
 <?php
 
-namespace Rapid\Api;
+namespace Rapid;
 
-use Rapid\Api\Rapid;
-use Rapid\Api\Response;
+use Rapid\Rapid;
+use Rapid\Response;
 use Unirest\Request;
 
 class Others {

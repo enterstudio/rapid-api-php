@@ -1,6 +1,6 @@
 <?php
 
-namespace Rapid\Api;
+namespace Rapid;
 
 use Unirest\Request;
 
