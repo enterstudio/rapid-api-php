@@ -1,13 +1,13 @@
 <?php
 
-require_once dirname(__FILE__) . '/api/News.php';
-require_once dirname(__FILE__) . '/api/Catalogs.php';
-require_once dirname(__FILE__) . '/api/Files.php';
-require_once dirname(__FILE__) . '/api/Others.php';
-require_once dirname(__FILE__) . '/api/Feedbacks.php';
-require_once dirname(__FILE__) . '/api/Guestbooks.php';
-require_once dirname(__FILE__) . '/api/Faqs.php';
-require_once dirname(__FILE__) . '/api/Photos.php';
-require_once dirname(__FILE__) . '/api/MultipleFiles.php';
-require_once dirname(__FILE__) . '/api/Rapid.php';
-require_once dirname(__FILE__) . '/api/Response.php';
+require_once dirname(__FILE__) . '/Rapid/News.php';
+require_once dirname(__FILE__) . '/Rapid/Catalogs.php';
+require_once dirname(__FILE__) . '/Rapid/Files.php';
+require_once dirname(__FILE__) . '/Rapid/Others.php';
+require_once dirname(__FILE__) . '/Rapid/Feedbacks.php';
+require_once dirname(__FILE__) . '/Rapid/Guestbooks.php';
+require_once dirname(__FILE__) . '/Rapid/Faqs.php';
+require_once dirname(__FILE__) . '/Rapid/Photos.php';
+require_once dirname(__FILE__) . '/Rapid/MultipleFiles.php';
+require_once dirname(__FILE__) . '/Rapid/Rapid.php';
+require_once dirname(__FILE__) . '/Rapid/Response.php';
