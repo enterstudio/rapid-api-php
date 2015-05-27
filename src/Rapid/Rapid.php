@@ -57,15 +57,41 @@ class Rapid {
     public static function getAuthHeader() {
         return ['X-Auth-Token' => self::getAuthToken(), 'X-User-Id' => self::getUserId()];
     }
-    
-    public static function logout(){
+
+    public static function logout() {
         Request::get(self::getAuthUrl('logout'), self::getAuthHeader());
-        
+
         //unset userId, token, and isLoggedIn to session
         session_start();
         unset($_SESSION['RapidUserId']);
         unset($_SESSION['RapidAuthToken']);
         unset($_SESSION['RapidIsLoggedIn']);
+    }
+
+    public static function getAll($route, $params = null, $headers = null) {
+        $response = Request::get(self::getUrl($route), $headers, $params);
+        return Response::make($response);
+    }
+
+    public static function get($route, $id, $params = null, $headers = null) {
+        $response = Request::get(self::getUrl($route . '/' . $id), $headers, $params);
+        return Response::make($response);
+    }
+
+    public static function post($route, $body = null, $headers = null) {
+        if (!$headers)
+            $headers = Rapid::getAuthHeader();
+
+        $response = Request::post(self::getUrl($route), $headers, http_build_query($body));
+        return Response::make($response);
+    }
+
+    public static function put($route, $id, $body = null, $headers = null) {
+        if (!$headers)
+            $headers = Rapid::getAuthHeader();
+
+        $response = Request::put(self::getUrl($route . '/' . $id), $headers, http_build_query($body));
+        return Response::make($response);
     }
 
 }
