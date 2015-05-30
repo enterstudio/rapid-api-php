@@ -58,11 +58,11 @@ class Response {
         return $this->headers()['x-pagination-per-page'];
     }
 
-    public function paginate() {
+    public function paginate($url) {
         $totalItems = $this->count();
         $itemsPerPage = $this->perPage();
         $currentPage = $this->currPage();
-        $urlPattern = '/foo/page/(:num)';
+        $urlPattern = '/' . $url . '/(:num)';
 
         $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
         return $paginator;
