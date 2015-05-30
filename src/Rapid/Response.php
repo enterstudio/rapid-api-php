@@ -62,7 +62,7 @@ class Response {
         $totalItems = $this->count();
         $itemsPerPage = $this->perPage();
         $currentPage = $this->currPage();
-        $urlPattern = '/' . $url . '/(:num)';
+        $urlPattern = '/' . $url . '?offset=(:num)';
 
         $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
         return $paginator;
