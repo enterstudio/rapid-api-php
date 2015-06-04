@@ -43,19 +43,19 @@ class Response {
     }
 
     public function count() {
-        return $this->headers()['x-pagination-total-count'];
+        return $this->headers()['X-Pagination-Total-Count'];
     }
 
     public function pageCount() {
-        return $this->headers()['x-pagination-page-count'];
+        return $this->headers()['X-Pagination-Page-Count'];
     }
 
     public function currPage() {
-        return $this->headers()['x-pagination-current-page'];
+        return $this->headers()['X-Pagination-Current-Page'];
     }
 
     public function perPage() {
-        return $this->headers()['x-pagination-per-page'];
+        return $this->headers()['X-Pagination-Per-Page'];
     }
 
     public function paginate($url) {
