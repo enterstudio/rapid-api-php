@@ -27,8 +27,8 @@ class Rapid {
         return self::$url . "/api/v" . self::$version . "/" . $action;
     }
 
-    public static function login($username, $password) {
-        $response = Request::post(self::getAuthUrl('login'), null, http_build_query(array('user' => $username, 'password' => $password)));
+    public static function login($appId, $username, $password) {
+        $response = Request::post(self::getAuthUrl('login'), null, http_build_query(array('user' => $appId . "-" . $username, 'password' => $password)));
 
         //set userId, token, and isLoggedIn to session
         session_start();
