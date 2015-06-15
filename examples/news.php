@@ -8,27 +8,11 @@ require_once '../src/Rapid/Response.php';
 use Rapid\Rapid;
 use Rapid\News;
 
-Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
+Rapid::init("c09488fe9421b97eff3cbfeaa553db8f034777bb");
 
-//GET ALL CATEGORIES
-echo "<h3>GET ALL CATEGORIES</h3>";
-$response = News::getCategories();
-print_r($response->headers());
-
-echo "<br/>";
-
-echo $response->paginate();
-
-foreach ($response->data() as $response) {
-    echo "<hr/>";
-    echo $response->_id . "<br/>";
-    echo $response->title . "<br/>";
-    echo "<hr/>";
-}
-
-////GET ALL BY CATEGORY
-//echo "<h3>GET ALL By Category Example</h3>";
-//$response = News::getAllByCategory("3JhroSxuswwuf83HH");
+////GET ALL CATEGORIES
+//echo "<h3>GET ALL CATEGORIES</h3>";
+//$response = News::getCategories();
 //print_r($response->headers());
 //
 //echo "<br/>";
@@ -41,6 +25,22 @@ foreach ($response->data() as $response) {
 //    echo $response->title . "<br/>";
 //    echo "<hr/>";
 //}
+
+//GET ALL BY CATEGORY
+echo "<h3>GET ALL By Category Example</h3>";
+$response = News::getAllByCategory("test-1", ['test'=>'in:xxxtt,dede', 'title'=>'my fourth poST']);
+print_r($response->headers());
+
+echo "<br/>";
+
+echo $response->paginate();
+
+foreach ($response->data() as $response) {
+    echo "<hr/>";
+    echo $response->_id . "<br/>";
+    echo $response->title . "<br/>";
+    echo "<hr/>";
+}
 
 ////GET ALL
 //echo "<h3>GET ALL Example</h3>";
@@ -78,7 +78,8 @@ foreach ($response->data() as $response) {
 //echo "<h3>POST Example </h3>";
 //$body = [
 //    'title' => 'My Fourth Post',
-//    'slug' => 'my-fourth-post'
+//    'slug' => 'my-fourth-post',
+//    'categoryId' => 'QNddwNxyBJzBjo7WQ'
 //];
 //$response = News::post($body);
 //print_r($response->message());

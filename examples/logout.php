@@ -6,7 +6,7 @@ require_once '../src/Rapid/Response.php';
 
 use Rapid\Rapid;
 
-Rapid::init("5b107695161b40780be8e1d3e4c17da4c8820244");
+Rapid::init("c09488fe9421b97eff3cbfeaa553db8f034777bb");
 
 
 //LOGOUT

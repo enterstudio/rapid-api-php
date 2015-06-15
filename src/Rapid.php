@@ -11,5 +11,6 @@ require_once dirname(__FILE__) . '/Rapid/Photos.php';
 require_once dirname(__FILE__) . '/Rapid/MultipleFiles.php';
 require_once dirname(__FILE__) . '/Rapid/Images.php';
 require_once dirname(__FILE__) . '/Rapid/Texts.php';
+require_once dirname(__FILE__) . '/Rapid/Likes.php';
 require_once dirname(__FILE__) . '/Rapid/Rapid.php';
 require_once dirname(__FILE__) . '/Rapid/Response.php';
