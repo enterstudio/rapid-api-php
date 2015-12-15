@@ -15,7 +15,7 @@ class Photos {
     private static $belongsToRouteOthers = 'others';
 
     public static function getAlbums($params = null, $headers = null) {
-        $response = Request::get(Rapid::getUrl(self::$belongsToRoute), $headers, $params);
+        $response = Request::get(Rapid::getUrl(self::$belongsToRouteAlbums), $headers, $params);
         return Response::make($response);
     }
 
