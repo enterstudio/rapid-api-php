@@ -18,6 +18,11 @@ class Photos {
         $response = Request::get(Rapid::getUrl(self::$belongsToRouteAlbums), $headers, $params);
         return Response::make($response);
     }
+    
+    public static function getAlbum($albumIdOrSlug = null, $headers = null) {
+        $response = Request::get(Rapid::getUrl(self::$belongsToRouteAlbums . '/' . $albumIdOrSlug), $headers);
+        return Response::make($response);
+    }
 
     public static function getAllByAlbum($albumIdOrSlug, $params = null, $headers = null) {
         $response = Request::get(Rapid::getUrl(self::$belongsToRouteAlbums . '/' . $albumIdOrSlug . '/'. self::$route), $headers, $params);
